@@ -1,0 +1,33 @@
+:root {
+  --paper: #f3efe6;
+  --ink: #1c1915;
+  --muted: #6d645b;
+  --line: #e4d9c8;
+  --card: #fffdf8;
+  --accent: #c24d2c;
+  --done: #8a8178;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgb(194 77 44 / 12%), transparent 28rem),
+    var(--paper);
+  font-family: Outfit, 'Avenir Next', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}

@@ -1,0 +1,194 @@
+.shell {
+  width: min(36rem, 100%);
+  margin: 0 auto;
+  padding: 4.5rem 1.25rem 3rem;
+}
+
+.masthead h1 {
+  margin: 0.2rem 0 0.6rem;
+  font-family: Fraunces, 'Iowan Old Style', Palatino, serif;
+  font-size: clamp(3.2rem, 8vw, 4.6rem);
+  font-weight: 560;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.lede {
+  max-width: 32rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.composer {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
+
+.composer input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink);
+  padding: 0.85rem 1.1rem;
+  font: inherit;
+  font-size: 1rem;
+}
+
+.composer input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.composer button,
+.filters button,
+.text,
+.delete {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.composer button {
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.85rem 1.2rem;
+  font-weight: 600;
+}
+
+.composer button:hover {
+  background: var(--accent);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1.4rem 0 0.8rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.2rem;
+  border-radius: 999px;
+  background: rgb(255 253 248 / 70%);
+}
+
+.filters button {
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  padding: 0.35rem 0.75rem;
+}
+
+.filters button[aria-pressed='true'] {
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: 0 1px 0 var(--line);
+}
+
+.count {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.list {
+  margin: 0;
+  padding: 0.35rem 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--line);
+  padding: 0.85rem 0.15rem;
+}
+
+.list label {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  gap: 0.75rem;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.list input {
+  width: 1.05rem;
+  height: 1.05rem;
+  margin-top: 0.2rem;
+  accent-color: var(--accent);
+}
+
+.list span {
+  overflow-wrap: anywhere;
+}
+
+.list li.done span {
+  color: var(--done);
+  text-decoration: line-through;
+}
+
+.delete,
+.text {
+  background: transparent;
+  color: var(--muted);
+}
+
+.delete:hover,
+.text:hover {
+  color: var(--accent);
+}
+
+.empty {
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.8rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .shell {
+    padding-top: 2.5rem;
+  }
+
+  .toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
